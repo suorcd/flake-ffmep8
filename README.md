@@ -1,6 +1,6 @@
 # flake-ffmep-full
 
-A Nix flake that builds FFmpeg from source using the latest code from the official FFmpeg repository, with all features enabled (ffmpeg-full configuration).
+A Nix flake that builds FFmpeg from source using the latest code from the official FFmpeg repository, with all features enabled (ffmpeg8 configuration).
 
 ## Usage
 
@@ -44,7 +44,7 @@ The built package will be available in `./result/bin/ffmpeg`.
 
 ### Use in a shell environment
 
-To use ffmpeg-full in a temporary shell (like `nix-shell`):
+To use ffmpeg8 in a temporary shell (like `nix-shell`):
 
 ```bash
 nix shell github:suorcd/flake-ffmep-full
@@ -73,11 +73,11 @@ Add to your `flake.nix`:
 ```nix
 {
   inputs = {
-    ffmpeg-full.url = "github:suorcd/flake-ffmep-full";
+    ffmpeg8.url = "github:suorcd/flake-ffmep-full";
   };
 
-  outputs = { self, ffmpeg-full, ... }: {
-    # Use ffmpeg-full.packages.x86_64-linux.default
+  outputs = { self, ffmpeg8, ... }: {
+    # Use ffmpeg8.packages.x86_64-linux.default
   };
 }
 ```
@@ -90,7 +90,7 @@ nix profile install github:suorcd/flake-ffmep-full
 
 ## What's included
 
-This flake builds FFmpeg from the latest source code in the official FFmpeg repository (https://github.com/FFmpeg/FFmpeg), using the full feature set from nixpkgs' `ffmpeg-full` package configuration. This means you get:
+This flake builds FFmpeg from the latest source code in the official FFmpeg repository (https://github.com/FFmpeg/FFmpeg), using the full feature set from nixpkgs' `ffmpeg8` package configuration. This means you get:
 
 - The latest FFmpeg code from the master branch
 - All optional features and codecs enabled
