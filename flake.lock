@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "ffmpeg-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1762961107,
+        "narHash": "sha256-00ilDCwHWzOCXd2hek3D2cQFRqzgn1i4Fv1yDiCI+Cw=",
+        "owner": "FFmpeg",
+        "repo": "FFmpeg",
+        "rev": "203c6a93d7851360aeb1011050a57cef5a832a6e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "FFmpeg",
+        "repo": "FFmpeg",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1762844143,
@@ -18,6 +34,7 @@
     },
     "root": {
       "inputs": {
+        "ffmpeg-src": "ffmpeg-src",
         "nixpkgs": "nixpkgs"
       }
     }
