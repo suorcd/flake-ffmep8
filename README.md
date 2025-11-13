@@ -1,4 +1,4 @@
-# flake-ffmep-full
+# flake-ffmep8
 
 A Nix flake that builds FFmpeg from source using the latest code from the official FFmpeg repository, with all features enabled (ffmpeg8 configuration).
 
@@ -25,13 +25,13 @@ nix --experimental-features 'nix-command flakes' run .
 Once pushed to GitHub:
 
 ```bash
-nix run github:suorcd/flake-ffmep-full
+nix run github:suorcd/flake-ffmep8
 ```
 
 Or with flakes enabled inline:
 
 ```bash
-nix --experimental-features 'nix-command flakes' run github:suorcd/flake-ffmep-full
+nix --experimental-features 'nix-command flakes' run github:suorcd/flake-ffmep8
 ```
 
 ### Build locally
@@ -47,7 +47,7 @@ The built package will be available in `./result/bin/ffmpeg`.
 To use ffmpeg8 in a temporary shell (like `nix-shell`):
 
 ```bash
-nix shell github:suorcd/flake-ffmep-full
+nix shell github:suorcd/flake-ffmep8
 ```
 
 Or locally:
@@ -59,7 +59,7 @@ nix shell .
 Or with flakes enabled inline:
 
 ```bash
-nix --experimental-features 'nix-command flakes' shell github:suorcd/flake-ffmep-full
+nix --experimental-features 'nix-command flakes' shell github:suorcd/flake-ffmep8
 # or locally:
 nix --experimental-features 'nix-command flakes' shell .
 ```
@@ -73,7 +73,7 @@ Add to your `flake.nix`:
 ```nix
 {
   inputs = {
-    ffmpeg8.url = "github:suorcd/flake-ffmep-full";
+    ffmpeg8.url = "github:suorcd/flake-ffmep8";
   };
 
   outputs = { self, ffmpeg8, ... }: {
@@ -85,7 +85,7 @@ Add to your `flake.nix`:
 ### Install to your profile
 
 ```bash
-nix profile install github:suorcd/flake-ffmep-full
+nix profile install github:suorcd/flake-ffmep8
 ```
 
 ## What's included
